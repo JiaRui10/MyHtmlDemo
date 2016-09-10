@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+
+<!-- 3、定义页面中所有链接的打开方式 -->
+<base target="_blank"/>
+</head>
+    <body>
+		<!-- 1、a标签的基本使用 -->
+    	<a href="http://www.baidu.com" >a标签</a>
+
+    	<!-- 2、控制链接在新窗口打开：target="_blank"(默认_self当前页) -->
+    	<a href="http://www.baidu.com" target="_blank">a标签</a>
+
+		<!-- 3、如果页面中有很多个页面需要在新窗口打开，可用base设置，其他需要在当前页面打开的单独设置即可 -->
+
+		<!-- 4、a标签的第二种应用：下载 -->
+		<a href="JiaRui10.ppt">a标签的下载功能</a>
+
+		<br>
+		<!-- 5、a标签的第三种应用：锚点 -->
+		<a href="#box1" target="_self">跳转到页面的第一个锚点</a>
+		<a href="#box2" target="_self">跳转到页面的第二个锚点</a>
+		<a href="#box3" target="_self">跳转到页面的第三个锚点</a>
+		<a href="#box4" target="_self">跳转到页面的第四个锚点</a>
+		<div id="box1" style="height:1000px;">第一个锚点</div>
+		<div id="box2" style="height:1000px;">第二个锚点</div>
+		<div id="box3" style="height:1000px;">第三个锚点</div>
+		<div id="box4" style="height:1000px;">第四个锚点</div>
+    </body>
+</html>

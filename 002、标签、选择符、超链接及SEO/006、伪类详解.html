@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+
+<!-- 1、伪类：用于向被选中的元素添加特殊的效果 -->
+	<!-- link  	未访问（默认）
+	hover	鼠标悬停（鼠标划过）
+	active	链接激活（鼠标按下）
+	visited	访问过后（点击过后） -->
+
+<!-- 伪类的顺序：link   visited   hover  active -->
+
+<!-- a伪类的应用：
+	a、四个伪类全用【搜索引擎、新闻门户、小说网站】
+	b、一般网站只用【a{}   a:hover{}】 -->
+
+<!-- IE6不支持a以外其他任何标签的伪类；
+IE6以上的浏览器支持所有标签的hover伪类； -->
+<style>
+	a:link {
+		font-size: 60px;
+		text-decoration: none;   /*拿掉a标签的默认修饰线*/
+		color: green;
+	}
+	a:visited {
+		color: black;
+	}
+	a:hover {
+		color: red;
+		text-decoration: underline;
+	}
+	a:active {
+		color: yellow;
+	}
+</style>
+</head>
+    <body>
+    	<a href="#">a标签（链接，下载，锚点）</a>
+    </body>
+</html>

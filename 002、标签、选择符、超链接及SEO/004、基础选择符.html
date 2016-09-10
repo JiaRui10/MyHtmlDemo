@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*1、id选择符*/
+	/*#box1 {
+		width: 100px;
+		height: 100px;
+		background: blue;
+	}*/
+
+	/*2、群组选择符*/
+	/*#box1,#box2*/
+
+	/*3、类选择符【可以重复使用的id】*/
+	/*在工作中用这个比较多，很少会用id*/
+	/*.box {
+		width: 100px;
+		height: 100px;
+		background: red;
+	}*/
+
+	/*4、类型选择符*/
+	/*div {
+		width: 100px;
+		height: 100px;
+		background: blue;
+	}*/
+
+	/*5、包含选择符：只设置div中【所有的】p标签。div所包含的p标签。*/
+	div p {
+		width: 100px;
+		height: 100px;
+		background: blue;
+	}
+
+	/*6、通配符。没什么用*/
+</style>
+</head>
+    <body>
+    	<div id="box1">块</div>
+    	<div id="box2">块</div>
+
+    	<div class="box">块</div>
+    	<!-- 3、有多个类时，用空格间隔开 -->
+    	<div class="box box2"></div>
+
+		<!-- 5、只设置div中的p标签 -->
+    	<div>
+    		<p>p1</p>
+    	</div>
+
+    </body>
+</html>
