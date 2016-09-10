@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*1、默认样式重置*/
+	body,p,h1,h2,h3,h4,h5,h6,dl,dd {
+		margin: 0px;
+		font-size: 12px;
+	}
+	ol,ul {
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+	}
+	a {
+		text-decoration: none;
+	}
+	img {
+		border: none;
+	}
+
+	/*2、从外面开始设置样式*/
+	.pages {
+		width: 600px;
+		height: 60px;
+		background: #e8e8e8;
+		margin: 90px auto;
+		text-align: center;   /*3、设置div里面内容的对齐方式*/
+	}
+
+	/*4、给a标签加样式*/
+	.pages a {
+		background: #fff;
+		border: 1px solid #cdcdcd;
+		color: #333333;
+		padding: 0px 8px 0px 9px;
+		height: 28px;
+		line-height: 28px;
+
+		/*5、内联不支持宽高，所以对其进行转换*/
+		display: inline-block;
+	}
+
+	/*6、添加鼠标划过效果*/
+	.pages a:hover {
+		border-color: red;
+		color: red;
+	}
+
+	/*7、给选中的那一页设置样式。*/
+	.pages .active {
+		font-weight: bold;
+		background: #fcf9ea;
+	}
+	/*8、并且当前页没有鼠标划过效果。而且光标是一个文本线*/
+	.pages .active:hover {
+		border-color: #cdcdcd;
+		color: #333333;
+
+		cursor: text;   /*pointer:手型 ...*/
+	}
+
+
+	/*9、光标类型也可以是一张图片*/
+	body {
+		height: 1500px;
+		cursor: url(images/hand.cur),pointer;  /*图片尽量用.cur后缀*/
+	}
+
+</style>
+</head>
+    <body>
+    	<div class="pages">
+    		<a href="#">上一页</a>
+    		<a href="#">1</a>
+    		<a href="#">2</a>
+    		<a href="#" class="active">3</a>
+    		<a href="#">4</a>
+    		<a href="#">5</a>
+    		<a href="#">...</a>
+    		<a href="#">222</a>
+    		<a href="#">下一页</a>
+    	</div>
+    </body>
+</html>

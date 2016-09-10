@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	body,p,h1,h2,h3,h4,h5,h6,dl,dd {
+		margin: 0px;
+		font-size: 12px;
+	}
+	ol,ul {
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+	}
+	a {
+		text-decoration: none;
+	}
+	img {
+		border: none;
+	}
+
+	/*1、
+	内联、内嵌、行内属性标签
+    	a、默认同行可以继续跟同类型标签；
+    	b、内容撑开宽度
+    	c、不支持宽高
+    	d、不支持上下的margin和padding
+    	e、代码换行被解析
+    块属性标签
+    	a、默认独占一行显示；
+    	b、没有宽度时，默认撑满一排；
+    	c、支持所有css命令
+    */
+	span,div {
+		background: blue;
+		width: 100px;
+		height: 100px;
+	}
+
+	/*3、标签的转换。用得并不多。大部分是为了解决页面兼容性问题。
+	display:block; 显示为块    display:inline;显示为内嵌
+	*/
+	span {
+		display: block;
+	}
+
+</style>
+</head>
+    <body>
+
+    	<span>区分样式</span>   <!-- 2、内联元素的换行会解析成一个空格。空格默认是字体大小的一半 -->
+    	<span>区分样式</span>
+    	<span>区分样式</span>
+    	<div>块</div>
+    	<div>块</div>
+    	<div>块</div>
+    </body>
+</html>
