@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<title>新建网页</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<style>
+	#box1 {
+		width: 500px;
+		height: 300px;
+		background: blue;
+
+		/*1、上下外边距会叠压*/
+		/*margin-bottom: 30px;*/
+	}
+	#box2 {
+		width: 300px;
+		height: 100px;
+		background: yellow;
+
+		/*1、上下外边距会叠压*/
+		/*margin-top: 30px;*/
+	}
+
+	/*2、子级设置的外边距(top)无效。传递给了父级。*/
+	/*即：父子级包含的时候,子级的margin-top会传递给父级 → 解决：内边距替代外边距*/
+
+	/*尽量少用外边距*/
+
+	/*3、外边距的应用：左右自动：margin:0 auto;*/
+</style>
+</head>
+    <body>
+    	<div id="box1"></div>
+    	<div id="box2"></div>
+    </body>
+</html>
