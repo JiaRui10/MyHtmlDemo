@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	.box {
+		width: 300px;
+		margin: 0 auto;
+		border: 10px solid black;
+		/*float: left;*/
+		/*display: inline-block;*/
+	}
+	.div {
+		width: 200px;
+		height: 200px;
+		background: red;
+		/*2、现在加上一个左浮动。运行，会发现父级包不住子元素了，因为子元素脱离文档流了*/
+		float: left;
+	}
+	/*1、运行，正常情况下子元素是可以撑开父级高度的*/
+	/*3、解决方法：
+		a、给父级也加浮动.这是margin左右自动失效
+		b、给父级加display:inline-block; 好处是：不会脱离文档流。这时如果再给父级加一个父级，它可以撑开。但是它的居中效果还是没了
+		c、
+		
+		9、将刚才的div和样式删除，回到原始状态
+		d、在浮动元素下面加<br clear="all"/>。因为br本身就没有高度，所以在IE6下也没有最小高度问题。
+		但是这种方法不符合W3C的结构、样式、行为三种分离。
+		浮动是由于样式问题，但这里却去改了结构。
+
+		10、
+		e、after伪类：在元素的末尾追加东西，用content。而且它不会改变现有结构。
+		具体操作：给浮动的元素的父级加一个clear2类，再对这个类设置3个属性。
+		注意：IE6 7下是不支持a元素之外的其他伪类的，所以IE6 7下这个方法没用。
+
+
+		11、注意：在IE6 7下浮动元素的父级有宽度的话就不用清浮动
+		hasLayout根据元素内容的大小或者父级的大小来重新计算元素的宽高
+
+
+		12、
+		f、在方法e的基础上加一个.clear2 {zoom:1;} zoom是放大或缩小，除normal外的任意值，这里用于触发hasLayout
+		最佳方法！！！！！
+		这样IE6 7下的问题
+		*/
+
+
+		/*13、总结：目前最常用的清浮动的方法
+		给浮动元素的父级加{zoom:1;}
+		:after{content:"";display:block;clear:both;}
+		*/
+
+	/*5、解决方法c，给那个div加样式*/
+	.clear {
+		/*height: 30px;*/
+		height: 0px;
+		background: blue;
+		/*6、运行。因为此div没有浮动脱离文档流，所以父级可以包住。*/
+		/*7、如果此时此div能排在那个浮动的div下面，那父级的高度也会被其撑开。这里加个clear。并且把高度设置成0px*/
+		clear: both;
+		/*8、此时可以实现目的。但在IE6有最小为高度19px，所以高度虽然是0px，但会显示成19px。
+		解决方法：加个font-size:0px;但也不能完全解决，它只能处理到最小2px，再小就不行了。后面再详细说明.....
+		*/
+	}
+
+	/*12、*/
+	.clear2 {
+		zoom: 1;
+	}
+	/*10、*/
+	.clear2:after {
+		content: "";
+		display: block;
+		clear: both;   /*注意这个属性只能加个块，所以上面将其转化为块*/
+	}
+</style>
+</head>
+    <body>
+    	<div class="box clear2">
+    		<div class="div"></div>
+    		<!-- 4、解决方法c、在浮动元素下加div，再设置3个属性 -->
+    		<!-- <div class="clear"></div> -->
+    		<!-- 9、 -->
+    		<!-- <br clear="all"/> -->
+    	</div>
+    </body>
+</html>
