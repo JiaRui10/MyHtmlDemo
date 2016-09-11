@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	body {
+		margin: 0px;
+	}
+	.box {
+		width: 100px;
+		height: 100px;
+		background: red;
+		margin: 100px;  /*1、注意加了margin属性*/
+		float: left;  /*2、注意加了浮动*/
+		/*3、运行。一般浏览器是没问题的，但在IE6下距离左边的距离变大了*/
+	}
+
+	/*5、给父级添加样式*/
+	.wrap {
+		float: left;
+		border: 10px solid #000;
+	}
+	/*6、运行。此时会看到在IE6下左右的margin【横向margin】增大了两倍*/
+	/*IE6下的双边距BUG：
+	产生条件【块元素有浮动 和 横向的margin】
+	结果【横向的margin值会被放大成两倍】
+	*/
+
+	/*7、解决办法
+	将块元素转成内嵌  →  display:inline;
+	*/
+</style>
+</head>
+    <body>
+    	<!-- <div class="box"></div> -->
+    	<!-- 4、给这个box加一个父级 -->
+    	<div class="wrap">
+    		<div class="box"></div>
+    	</div>
+    </body>
+</html>

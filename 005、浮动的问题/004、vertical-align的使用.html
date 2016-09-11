@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	.box {
+		height: 200px;
+		border: 10px solid black;
+		text-align: center;
+	}
+	.span1 {
+		width: 100px;
+		height: 200px;
+		background: red;
+		display: inline-block;  /*1、内联不支持宽高，所以这里进行转换*/
+		/*2、vertical-align:top  用于控制元素的对齐方式*/
+		/*注意下面的span也要加*/
+		vertical-align: top;
+		/*3、注意这个属性对浮动元素是无效的。浮动元素默认是顶部对齐*/
+	}
+	.span2 {
+		width: 200px;
+		height: 100px;
+		background: blue;
+		display: inline-block;
+		vertical-align: top;
+	}
+</style>
+</head>
+    <body>
+    	<div class="box">
+    		<span class="span1"></span>
+    		<span class="span2"></span>
+    	</div>
+    </body>
+</html>

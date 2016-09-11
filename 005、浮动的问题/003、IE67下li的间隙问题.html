@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*1、清除默认样式值*/
+	ul {
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+	}
+
+	/*2、*/
+	.list {
+		width: 300px;
+	}
+	.list li {
+		height: 30px;
+		border: 1px solid #000;
+		font-size: 12px;
+		line-height: 30px;
+		/*9*/
+		/*float: left;
+		width: 298px;*/
+
+		/*10、*/
+		vertical-align: top;
+	}
+	/*3、运行*/
+	/*4、让作者字样放到右边*/
+	span {
+		float: right;
+	}
+	/*5、运行。看起来没啥问题，但在IE6 7下作者字样会自动换行*/
+	/*6、在IE6 7下浮动的同行元素最好也加浮动。这里可以解决换行问题*/
+	a {
+		float: left;
+	}
+
+	/*7、这时会发现，在IE6下上下li之间会有3px的距离。这就是IE6 7下li下几px的间隙问题*/
+	/*产生原因：【在IE6 7下li本身没浮动，但是内容浮动了，所以li下就会多出来几px】*/
+
+	/*8、【解决办法】
+	a、给li加上浮动和宽度。缺点：麻烦
+	b、给li加  vertical-align:top;  垂直对齐方式，这里是顶部对齐
+	*/
+
+</style>
+</head>
+    <body>
+    	<ul class="list">
+    		<li>
+    			<a href="#">文字文字文字文字文字</a>
+    			<span>作者</span>
+    		</li>
+    		<li>
+    			<a href="#">文字文字文字文字文字</a>
+    			<span>作者</span>
+    		</li>
+    		<li>
+    			<a href="#">文字文字文字文字文字</a>
+    			<span>作者</span>
+    		</li>
+    		<li>
+    			<a href="#">文字文字文字文字文字</a>
+    			<span>作者</span>
+    		</li>
+    	</ul>
+    </body>
+</html>
