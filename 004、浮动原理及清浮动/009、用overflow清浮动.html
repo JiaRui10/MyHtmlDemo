@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	.box {
+		width: 300px;
+		height: 300px;
+		border: 1px solid #000;
+		/*3、*/
+		overflow: hidden;
+	}
+	.div1 {
+		width: 260px;
+		height: 400px;
+		background: red;
+		float: left;
+		/*1、运行。这是父级还是包不住子元素*/
+		/*2、overflow具有能包住浮动元素的特点*/
+		/*第6种清除浮动的方法。
+		3、用overflow清浮动，给浮动元素的父级加overflow:hidden; 或auto*/
+		/*这种方法也是有问题，因为overflow在IE6下并不具有包住浮动元素的功能，所以用overflow的时候一定要配合zoom:1;【注意加在overflow的属性后面】，但还是推荐用第5种方法*/
+	}
+</style>
+</head>
+    <body>
+    	<div class="box">
+    		<div class="div1"></div>
+    	</div>
+    </body>
+</html>
