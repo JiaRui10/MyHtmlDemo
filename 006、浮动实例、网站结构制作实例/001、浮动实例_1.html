@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*10、默认样式初始化*/
+	body,ul,dl,dd {
+		margin: 0;
+		padding: 0;
+		font-family: "宋体";   /*设置页面的默认字体*/
+	}
+	li {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		/*11、用PS测量示例中文字的颜色，在a标签初始化的时候也设置上去*/
+		color: #4f6c84;
+	}
+	img {
+		border: none;
+		vertical-align: top;   /*注意图片的间隙也要去掉*/
+	}
+
+	/*12、*/
+	.wrap {
+		/*width: 460px;*/
+		/*14、注意加了padding，宽度也要适当调整*/
+		width: 445px;
+		margin: 0 auto;
+		/*13、这里下面的padding还没确定，先用0*/
+		padding: 12px 8px 0px 7px;
+
+		/*15、中间有一个背景图，将其截取下来。【距离左边220px】*/
+		background: url(images/img1/bg.gif) no-repeat 220px 0;
+	}
+
+	/*16、因为左右两块要在一行，所以要加浮动。所以父级要清浮动。设置下面样式，并将clear这个类加给父级wrap*/
+	.clear {
+		zoom: 1;
+	}
+	.clear:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	.left {
+		/*17、设置左边的宽度，由刚才中间的背景图的左margin减去左padding 7px.这里取偶数用212px*/
+		width: 212px;
+		/*18、设置浮动*/
+		float: left;
+	}
+
+	/*19、注意左边【上】的两部分也是在同一行，所以也要加浮动。给它的父级leftTop加一个类clear*/
+	.leftTop .pic{
+		width: 124px;
+		/*20、图片的旁边还有个背景，将其截取下来。注意【背景是在最右边】*/
+		background: url(images/img1/picBg.gif) no-repeat right 0;
+		padding-right: 5px;   /*从元素的右边出去，所以给其加5px的填充*/
+		float: left;   /*设置浮动*/
+	}
+	/*21、将边框设置给里面的a标签*/
+	.leftTop .pic a {
+		border: 1px solid #c3cfd9;
+		/*22、为了能让a标签能包住图片。将其转换为块*/
+		display: block;
+		/*23、图片和边框之间还有距离*/
+		padding: 3px;
+	}
+
+	/*24、注意右边【上】右边的列表因为在同一行，所以也要加浮动*/
+	.leftTop dl {
+		float: left;
+		width: 60px;
+		/*距离左边5px。这里要注意IE6 7下的双边距问题。所以这里用padding代替*/
+		padding-left: 5px;
+		font-size: 12px;
+
+		/*25、标题的行高不太好确定。li的行高可以直接量出来*/
+		line-height: 20px;
+		color: #7190a6;
+	}
+
+	/*26、左边【下】。先量出li的行高和字体大小，再确定列表距离顶部的px*/
+	.leftBottom {
+		padding-top: 10px;  /*这里还是用padding代替margin*/
+	}
+	.leftBottom li {
+		font-size: 12px;
+		line-height: 20px;
+		padding-left: 10px;  /*距离左边10px*/
+
+		/*27、截取左边的小点当背景。这里有个小点：li的背景一般是不会用的，因为其在各个浏览器的表现都是不一样的*/
+		/*小点距离顶部7px*/
+		background: url(images/img1/liBg.gif) no-repeat 0 7px;
+		/*至此，左边已完成*/
+	}
+
+	/*28、右边的部分先确定其宽度*/
+	/*先确定li的宽度100px。再确定两个li【图片】的间隙10px*/
+	/*最后确定右边部分的宽度220px*/
+	.right {
+		width: 220px;
+		float: right;
+	}
+	.right li {
+		width: 100px;
+		float: left;
+		padding-left: 10px;  /*这里也有双边距问题，所以也用padding替换*/
+	}
+	.right li a {
+		/*29、a标签里面要包住两个东西，所以现将其变成块*/
+		display: block;
+	}
+	.right li a img {
+		/*30、边框加给图片*/
+		border: 1px solid #c3cfd9;
+		padding: 3px;
+	}
+	.right li a strong {
+		/*31、因为strong是内嵌不支持宽高。所以将其变成块*/
+		display: block;
+		padding-top: 3px;
+		font-size: 12px;
+		line-height: 24px;
+
+		text-align: center;  /*让文字居中*/
+	}
+	/*至此完成页面。最后再测试其在各浏览器下的兼容性*/
+</style>
+</head>
+    <body>
+    	<div class="wrap clear">
+    		<div class="left">
+    			<!-- 2、左边分为上下两块：leftTop和leftBottom -->
+    			<div class="leftTop clear">
+    				<!-- 3、左边【上】又分为左右两块，将img用a和div包住 -->
+    				<!-- 用PS将实例中图片截取下来 -->
+    				<div class="pic">
+    					<a href="#">
+    						<img src="images/img1/pic.gif" alt="">
+    					</a>
+    				</div>
+					<!-- 4、左边【上】的右边是一个dl，而且标题是可以点击的，所以要用a包住 -->
+					<dl>
+						<dt><a href="#">潜伏</a></dt>
+						<dd>导演：姜伟</dd>
+						<dd>主演：姚晨 孙红雷</dd>
+					</dl>
+    			</div>
+    			<!-- 5、左边【下】是一个列表，而且注意是可以点击的 -->
+    			<ul class="leftBottom">
+    				<li><a href="#">海清张嘉译演绎房奴生活《蜗居》</a></li>
+    			<li>
+    				<a href="#">琼瑶经典言情剧集锦</a>
+    				<a href="#">梦露电影知多少</a>
+    			</li>
+    			</ul>
+    		</div>
+
+    		<!-- 6、右边的结构和样式也是一样的，所以用列表 -->
+    		<ul class="right">
+    			<li>
+    				<a href="#">
+    					<!-- 7、将示例中的图片截取下来 -->
+    					<img src="images/img1/pic2.gif" alt="">
+    					<!-- 8、下面的文字强调一下 -->
+    					<strong>将爱情进行到底</strong>
+    				</a>
+    			</li>
+    			<!-- 9、将上面的li复制一份。至此，结构已经呈现完毕 -->
+    			<li>
+    				<a href="#">
+    					<img src="images/img1/pic2.gif" alt="">
+    					<strong>将爱情进行到底</strong>
+    				</a>
+    			</li>
+    		</ul>
+    	</div>
+    </body>
+
+
+<!-- +++++++++++++两个结构的区别 
+a、
+<li>
+    <a href="#">
+    	<img src="images/img1/pic2.gif" alt="">
+    	<strong>将爱情进行到底</strong>
+    </a>
+</li>
+这种结构相比下面那种简化了很多。
+但有问题。如果图片加载不出来,这时a标签里面就空了。会影响到别得地方。就算设置了宽高也没用（在火狐下没用）
+
+b、
+<div class="pic">
+	<a href="#">
+		<img/>
+	</a>
+</div>
+<h3><a href="#">将爱情进行到底</a></h3>
+这里如果图片加载不出来，只要给其设置好宽高，就不会影响到别的地方的结构
+这种结构的扩展性会好一点
+
+【上面两种方法根据实际需求使用】
+
+-->
+</html>
