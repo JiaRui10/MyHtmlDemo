@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	.box1 {
+		width: 100px;
+		height: 100px;
+		background: red;
+	}
+	.box2 {
+		width: 100px;
+		height: 100px;
+		background: blue;
+		/*方法a：.box2用正的margin，.box3用负的margin。麻烦*/
+		/*方法b：使用相对定位。控制它的定位偏移*/
+		
+		/*1、相对定位。
+		a、不影响元素本身的特性；
+		b、不使元素脱离文档流；
+		c、如果没有定位偏移量，对元素本身没有任何影响.......................
+		*/
+		position: relative;  /*将元素变成定位元素*/
+		/*定位元素位置控制：top/right/bottom/left 定位元素偏移量*/
+		top: 100px;  /*距离上面的偏移量。也可以是负数*/
+		left: 100px;
+
+		/*2、文档流是指元素在页面中所占据的位置。这里虽然div2已经离开了原来的位置，但它原来的位置依然是存在的。*/
+	}
+	.box3 {
+		width: 100px;
+		height: 100px;
+		background: green;
+	}
+</style>
+</head>
+    <body>
+    	<div class="box1">div1</div>
+    	<div class="box2">div2</div>
+    	<div class="box3">div3</div>
+    </body>
+</html>

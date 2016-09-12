@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	.box1 {
+		width: 100px;
+		height: 100px;
+		background: red;
+
+		/*1、positin:absolute; 绝对定位
+			a、使元素完全脱离文档流；
+			b、使内嵌支持宽高；
+			c、块属性标签内容撑开宽度；
+		*/
+		/*2*/
+		position: absolute;
+
+		/*4、z-index:[number];定位层级*/
+		z-index: 1;
+	}
+	.box2 {
+		width: 100px;
+		height: 100px;
+		background: blue;
+
+		/*3。设置完这个属性之后，会发现div1消失了。其实它是跑到div2的下面了，这说明定位元素是有层级关系的*/
+				/*【定位元素默认后者的层级比前者高】*/
+		position: relative;
+	}
+	.box3 {
+		width: 100px;
+		height: 100px;
+		background: green;
+	}
+</style>
+</head>
+    <body>
+    	<div class="box1">div1</div>
+    	<div class="box2">div2</div>
+    	<div class="box3">div3</div>
+    </body>
+</html>
