@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*2、默认样式初始化*/
+	body,h2,ul {
+		margin: 0;
+		padding: 0;
+		font-family: "宋体";  /*设置默认字体*/
+	}
+	li {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+		color: #333;  /*设置a标签默认字体颜色*/
+	}
+	img {
+		border: none;
+		vertical-align: top;
+	}
+	.clear {
+		zoom: 1;
+	}
+	.clear:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	/*3*/
+	.wrap {
+		width: 376px;
+		margin: 30px auto;
+		padding-top: 11px;
+		background: #f4fafb;
+	}
+	/*4*/
+	.head {
+		height: 25px;
+		/*这里头部的背景处理方式跟上个案例一样，即【水平翻转】*/
+		background: url(images/img3/headBg.gif) no-repeat;
+	}
+	/*5*/
+	.title {
+		line-height: 24px;
+		padding-top: 1px;
+		font-size: 12px;
+		color: #294852;
+		text-indent: 33px;  /*距离左边33px*/
+
+		background: url(images/img3/titleBg.gif) no-repeat 9px 6px;
+	}
+
+	/*6*/
+	.picList {
+		padding-top: 16px;
+		/*因为它底下的li要浮动，所以这里给picList加一个clear类清除浮动*/
+	}
+	/*7、li本身只有91px宽，但它右边背景还出去了17px*/
+	.picList li {
+		width: 91px;
+		padding-right: 17px;
+		margin: 0 8px;
+		float: left;
+		display: inline;  /*处理双边距问题*/
+
+		/*将背景切下来，给li使用。最右边，距离顶部17px*/
+		background: url(images/img3/liBg.gif) no-repeat right 17px;
+	}
+	/*8*/
+	.picList a {
+		display: block;
+	}
+	/*9*/
+	.picList img {
+		border: 1px solid #c8c4d3;
+		padding: 2px;
+		background: #fff;
+	}
+	/*10*/
+	.picList strong {
+		display: block;
+		text-align: center;
+		padding-top: 4px;
+		font-size: 12px;
+		line-height: 22px;
+	}
+	/*11*/
+	.textList {
+		padding: 0 27px;
+		line-height: 22px;
+		font-size: 12px;
+	}
+	/*12、设置下面li的背景。距离顶部10px。文字距离左边14px*/
+	.textList li {
+		background: url(images/img3/textListBg.gif) no-repeat 0 10px;
+		text-indent: 14px;
+	}
+	/*【至此完成。测试兼容性】*/
+</style>
+</head>
+    <body>
+    	<!-- 1、设置结构 -->
+    	<div class="wrap">
+    		<div class="head">
+    			<h2 class="title">华语谍报</h2>
+    		</div>
+    		<!-- 中间的结构和样式是一样的，所以还是用列表 -->
+    		<ul class="picList clear">
+    			<li>
+    				<a href="#">
+    					<img src="images/img3/pic.gif" alt="">
+    					<strong>大叔</strong>
+    				</a>
+    			</li>
+    			<!-- 将上面的li复制两份 -->
+    			<li>
+    				<a href="#">
+    					<img src="images/img3/pic.gif" alt="">
+    					<strong>大叔</strong>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+    					<img src="images/img3/pic.gif" alt="">
+    					<strong>大叔</strong>
+    				</a>
+    			</li>
+    		</ul>
+    		<!-- 最下面还是个列表 -->
+    		<ul class="textList">
+    			<li>
+    				<a href="#">化妆，还是伪装？港三区美亚版《最强喜事》</a>
+    			</li>
+    			<!-- 将上面的li复制两份 -->
+    			<li>
+    				<a href="#">化妆，还是伪装？港三区美亚版《最强喜事》</a>
+    			</li>
+    			<li>
+    				<a href="#">化妆，还是伪装？港三区美亚版《最强喜事》</a>
+    			</li>
+    		</ul>
+    	</div>
+    </body>
+</html>
