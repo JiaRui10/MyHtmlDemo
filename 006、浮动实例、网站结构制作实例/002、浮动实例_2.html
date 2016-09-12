@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*7、默认样式初始化*/
+	body,ul,h2,h3,p {
+		margin: 0;
+		padding: 0;
+		font-family: "宋体";  /*给整个页面设置一个默认字体*/
+	}
+	li {
+		list-style: none;
+	}
+	img {
+		border: none;
+		vertical-align: top;  /*注意清除图片的间隙*/
+	}
+	a {
+		text-decoration: none;
+	}
+
+	/*8、*/
+	.wrap {
+		width: 366px;
+		/*设置整个外框的背景颜色*/
+		background: #f4fafb;
+		margin: 30px auto;
+	}
+	/*9、*/
+	.head {
+		height: 23px;
+		/*将背景切下来，注意背景左边是渐变消失。右边也是*/
+		/*先将头部切下来，右边再切一块下来，复制，【水平翻转】，拉到最左边，覆盖掉原本的文字*/
+		background: url(images/img2/headBg.gif) no-repeat;
+	}
+	/*10、title自己本身也有一个背景。距离左上角6 * 4 */
+	.title {
+		background: url(images/img2/titleBg.gif) no-repeat 6px 4px;
+		line-height: 22px;
+		font-size: 12px;
+		content: #294852;
+		padding-left: 30px; /*距离左侧30px*/
+	}
+
+
+	/*11、*/
+	.list {
+		padding: 0 7px 2px 5px;
+		/*先确定li的距离，这里两个li有22px的距离。li顶部有13px的距离*/
+	}
+	/*12、这里注意，li本身不浮动，内容浮动*/
+	.list li {
+		/*给li清除浮动。这里偷懒，没用第5种方法*/
+		zoom: 1;
+		overflow: hidden;
+		vertical-align: top;  /*再清除IE6 7下几px的间隙。注意........*/
+
+		/*14*/
+		padding: 13px 0 9px 0;
+	}
+	/*13、*/
+	.list .pic {
+		width: 95px;
+		height: 60px;
+		float: left;
+		border: 1px solid #c8c4d3;
+		padding: 2px;
+		background: #fff;
+	}
+	/*15*/
+	.list .text {
+		width: 240px;
+		float: right;
+	}
+	/*16*/
+	.list h3 {
+		line-height: 24px;
+		font-size: 12px;
+	}
+	/*17*/
+	.list h3 a {
+		color: #333;
+	}
+	/*18*/
+	.list p {
+		font-size: 12px;
+		line-height: 20px;
+		color: #666;
+	}
+	/*19*/
+	.list p a {
+		color: #666;
+	}
+	/*【至此完毕。测试其兼容性】*/
+</style>
+</head>
+    <body>
+    	<!-- 标签嵌套规范：p标签里不能包含块【标签】 -->
+
+    	<!-- 1、写结构 -->
+    	<div class="wrap">
+    		<!-- 2、注意头部那一块有一个背景。而且左边还有个图标。所以应该是两个背景 -->
+    		<div class="head">
+    			<h2 class="title">外媒评论精选</h2>
+    		</div>
+
+    		<!-- 3、下面部分结构和样式都是一样的。所以还是用列表 -->
+    		<ul class="list">
+    			<!-- 4、在li里面又分了左右两部分 -->
+    			<li>
+    				<a href="#" class="pic">
+    					<img src="images/img2/pic.gif" alt="">
+    				</a>
+    				<div class="text">
+    					<h3><a href="#">《加勒比海盗4》——商业味浓郁</a></h3>
+    					<!-- 5、注意[详细]是可以点击的链接 -->
+    					<p>本集《加勒比海盗》讲述杰克船长受英王所托寻找不老泉，与他...[<a href="#">详细</a>]</p>
+    				</div>
+    			</li>
+    			<!-- 6、上面的li复制两份。至此结构填写完毕 -->
+    			<li>
+    				<a href="#" class="pic">
+    					<img src="images/img2/pic.gif" alt="">
+    				</a>
+    				<div class="text">
+    					<h3><a href="#">《加勒比海盗4》——商业味浓郁</a></h3>
+    					<p>本集《加勒比海盗》讲述杰克船长受英王所托寻找不老泉，与他...[<a href="#">详细</a>]</p>
+    				</div>
+    			</li>
+    			<li>
+    				<a href="#" class="pic">
+    					<img src="images/img2/pic.gif" alt="">
+    				</a>
+    				<div class="text">
+    					<h3><a href="#">《加勒比海盗4》——商业味浓郁</a></h3>
+    					<p>本集《加勒比海盗》讲述杰克船长受英王所托寻找不老泉，与他...[<a href="#">详细</a>]</p>
+    				</div>
+    			</li>
+    		</ul>
+    	</div>
+    </body>
+</html>
