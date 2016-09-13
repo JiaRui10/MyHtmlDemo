@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	body {
+		border: 1px solid black;
+	}
+
+	.box1 {
+		width: 300px;
+		height: 300px;
+		background: red;
+		/*2、给box1加一个相对定位*/
+		position: relative;
+		/*这时会发现box3相对于box1的右下角*/
+		/*【绝对定位：如果有定位父级相对于定位父级发生偏移，没有定位父级相对于整个文档发生偏移】*/
+		/*这里box3会绕过结构父级，直接去找有定位的父级*/
+
+		/*【相对定位一般都是配合绝对定位元素使用】*/
+	}
+	.box2 {
+		width: 200px;
+		height: 200px;
+		background: blue;
+	}
+	.box3 {
+		width: 100px;
+		height: 100px;
+		background: green;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		/*1、运行。 始终在文档右下角，无论怎么调整窗口大小*/
+	}
+</style>
+</head>
+    <body>
+    	<div class="box1">   <!-- 有定位的父级【相对和绝对都行】 -->
+    		<div class="box2">  <!-- 结构父级 -->
+    			<div class="box3"></div> <!-- 绝对定位元素 -->
+    		</div>
+    	</div>
+    </body>
+</html>

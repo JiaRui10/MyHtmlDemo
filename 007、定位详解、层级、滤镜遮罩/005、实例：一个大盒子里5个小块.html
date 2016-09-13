@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*3*/
+	.parent {
+		border: 2px solid red;
+		padding: 10px;
+		width: 300px;
+		height: 300px;
+		margin: 90px auto;
+
+		/*5*/
+		position: relative;
+	}
+	/*4、【绝对定位可以使内嵌支持宽高】*/
+	.parent a {
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+		background: red;
+		position: absolute;
+		color: #fff;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	/*6*/
+	.link1 {
+		top: 10px;
+		left: 10px;
+	}
+	.link2 {
+		top: 10px;
+		right: 10px;
+	}
+	a.link3 {   /*【注意这里的选择器】*/
+		top: 110px;
+		right: 110px;
+		background: blue;
+		color: yellow;
+	}
+	.link4 {
+		left: 10px;
+		bottom: 10px;
+	}
+	.link5 {
+		right: 10px;
+		bottom: 10px;
+	}
+</style>
+</head>
+    <body>
+    	<!-- 1、实例：一个大盒子里面包了五个块 -->
+    	<!-- 2、一个div中包含5个链接 -->
+    	<div class="parent">
+    		<a href="#" class="link1">链接1</a>
+    		<a href="#" class="link2">链接2</a>
+    		<a href="#" class="link3">链接3</a>
+    		<a href="#" class="link4">链接4</a>
+    		<a href="#" class="link5">链接5</a>
+    	</div>
+    </body>
+</html>

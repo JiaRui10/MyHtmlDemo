@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*2*/
+	#box1 {
+		width: 500px;
+		height: 300px;
+		background: blue;
+		/*4*/
+		overflow: hidden;
+
+		/*6*/
+		position: relative;
+	}
+	#box2 {
+		width: 300px;
+		height: 500px;
+		background: yellow;
+
+		/*5、这里给子级加一个相对定位，会发现IE6下父级包不住了*/
+		position: relative;
+		/*【IE6下父级的overflow是包不住自己的相对定位的】*/
+		/*解决方法：给父级也加一个相对定位*/
+	}
+	/*3*/
+	/*运行。在标准浏览器下，父级撑不住子级。但在IE6下它会把父级的高度给撑开*/
+	/*我们之前在解决这个问题的时候，是给父级在一个overflow:hidden;*/
+</style>
+</head>
+    <body>
+    	<!-- 1 -->
+    	<div id="box1">
+    		<div id="box2"></div>
+    	</div>
+    </body>
+</html>

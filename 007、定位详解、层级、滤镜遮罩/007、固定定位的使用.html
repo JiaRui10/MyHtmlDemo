@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*2*/
+	body {
+		height: 1500px;
+	}
+	.box1 {
+		width: 500px;
+		height: 100px;
+		background: red;
+		/*3*/
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	.box2 {
+		width: 300px;
+		height: 300px;
+		background: blue;
+		/*4、给box2加一个固定定位*/
+		position: fixed;
+		right: 0;
+		bottom: 0;
+		/*运行。会发现固定定位跟绝对定位一样，也可以使元素脱离文档流*/
+		/*它跟绝对定位的特性基本一致，唯一区别在于：拖动页面滚动条之后，固定定位元素依旧在页面的右下角*/
+	}
+</style>
+</head>
+    <body>
+    	<!-- 1 -->
+    	<div class="box1">position:absolute;绝对定位</div>
+    	<!-- <div class="box2">position:fixed;固定定位</div> -->
+
+    	<!-- 5、给固定定位加一个父级，并且设置为相对定位元素 -->
+    	<div style="width:200px;height:200px;border:5px solid black;position:relative;">
+    		<div class="box2">position:fixed;固定定位</div>
+    	</div>
+    	<!-- 运行。会发现固定定位还是在右下角。不会搭理他的父级 -->
+    	<!-- 注意：【IE6下不支持固定定位】 -->
+    </body>
+</html>

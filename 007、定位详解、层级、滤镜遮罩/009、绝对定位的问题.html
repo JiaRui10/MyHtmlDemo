@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*2*/
+	#box1 {
+		width: 300px;
+		height: 300px;
+		border: 1px solid black;
+		position: relative;
+	}
+	#box2 {
+		width: 50px;
+		height: 50px;
+		background: #7c1;
+		position: absolute;
+		/*right: 0;
+		bottom: 0;*/
+		/*3、运行之后没问题。现在改变它的偏移量*/
+		right: -1px;
+		bottom: -1px;
+		/*这时会发现绿色的小块会把它周边的边框给盖住*/
+		/*【在IE6下绝对定位的父级宽高都为奇数，那么在IE6下绝对定位的right和bottom都有1px的偏差】*/
+	}
+</style>
+</head>
+    <body>
+    	<!-- 1 -->
+    	<div id="box1">
+    		<div id="box2"></div>
+    	</div>
+    </body>
+</html>
