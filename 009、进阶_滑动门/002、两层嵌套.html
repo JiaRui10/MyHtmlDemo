@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	.btn {
+		width: 100px;
+		height: 31px;
+		background: url(images/img1/btn2.png) no-repeat;
+		/*1、运行。这时背景就只差一个右角*/
+	}
+	/*3*/
+	.btnR {
+		height: 31px;
+		/*注意这里背景也要放到右边去*/
+		background: url(images/img1/btnR.png) no-repeat right 0;
+	}
+	/*【这种方法比三层少了一层背景，也少了一个元素。但这种方法的扩展性就不如三层嵌套。它有图片宽度的限制，一旦超过了图片的总宽度，它就会裂开】*/
+
+	/*总结：扩展性要求高，图片比较大的，用三层嵌套；扩展要求不高，图片比较小的，用二层嵌套。*/
+</style>
+</head>
+    <body>
+    	<div class="btn">
+    		<!-- 2 -->
+    		<div class="btnR">百度</div>
+    	</div>
+    </body>
+</html>

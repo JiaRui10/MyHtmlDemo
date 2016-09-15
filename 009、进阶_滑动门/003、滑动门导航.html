@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	/*3、清除默认样式*/
+	body,ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style: none;
+	}
+	a {
+		text-decoration: none;
+	}
+	/*4*/
+	body {
+		background: #23232f;
+		padding: 50px;
+	}
+	.nav {
+		/*5*/
+		/*一个元素，可以拥有一个背景色，也可以拥有一个背景图。而且背景图是盖在背景图片上面的*/
+		background: #0f0f14 url(images/img1/navL.png) no-repeat;
+		/*6、观察效果图可发现，选项中文字左padding和右padding都是一样的。而且宽度应该由内容撑开*/
+		/*【元素的宽度由内容撑开】：
+		display: inline;    	不支持高度
+		display: inline-block;	不支持块标签，在IE6 7下
+		float
+		position: absolute;
+		position: fixed;*/
+
+		/*7、给nav加上浮动，这种宽度由内容撑开*/
+		float: left;
+	}
+
+	/*8*/
+	.navR {
+		background: url(images/img1/navR.png) no-repeat right 0;
+		/*这里也要加浮动*/
+		float: left;
+
+		/*10*/
+		padding: 4px 4px 0 3px;
+	}
+
+	.navR li {
+		/*9、让li都排到同一行去*/
+		float: left;
+		padding-left: 1px;
+	}
+	/*11、a标签需要支持高度，并且宽度由内容撑开*/
+	.nav a {
+		float: left;
+		background: url(images/img1/btn2.png) no-repeat;
+	}
+	/*12*/
+	.nav span {
+		float: left;
+		background: url(images/img1/btnR.png) no-repeat right 0;
+		height: 31px;
+
+		/*13*/
+		font-size: 14px;
+		line-height: 30px;
+		color: #fff;
+		padding: 0 18px;
+	}
+
+	/*14、加上鼠标移动状态*/
+	/*16、将active加在这里*/
+	.nav a:hover,.nav .active {
+		background-image: url(images/img1/hoverA.png);
+	}
+	/*右角也加上*/
+	/*17、active也要加在这里。运行，默认首页选中*/
+	.nav a:hover span,.nav .active span{
+		background-image: url(images/img1/hoverR.png);
+	}
+</style>
+</head>
+    <body>
+    	<!-- 1、对于整个导航来说，它的扩展性会比较高。有可能说多两个选项之类的。里面的选项扩展性不会太大 -->
+    	<!-- 2、结构。里面是两层嵌套：a标签是左角，span是右角 -->
+    	<div class="nav">
+    		<ul class="navR">
+    			<li>
+    				<!-- 15、给停留在所在页面的a标签加一个class -->
+    				<a href="#" class="active">
+    					<span>JiaRui</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+    					<span>课程</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+    					<span>关于我们</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#">
+    					<span>加入JiaRui</span>
+    				</a>
+    			</li>
+    		</ul>
+    	</div>
+    </body>
+</html>

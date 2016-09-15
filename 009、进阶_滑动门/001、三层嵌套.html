@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	.btn {
+		width: 150px;
+		/*2*/
+		background: url(images/img1/btn.png) repeat-x;
+		height: 31px;
+		/*3、运行。左右上角还是有两个角，这时将两张图再切出来，分别盖住*/
+	}
+
+	/*5、*/
+	.btnL {
+		height: 31px;
+		background: url(images/img1/btnL.png) no-repeat;
+	}
+	/*7*/
+	.btnR {
+		height: 31px;
+		/*background: url(images/img1/btnR.png) no-repeat;*/
+		/*8、运行，这时会发现右下角也在左边显示。所以这里要设置背景图位置right*/
+		background: url(images/img1/btnR.png) no-repeat right 0;
+	}
+	/*【这时就没问题了。而且由于中间的背景是平铺的，所以可以无限制拉伸】*/
+	/*但是这种方法略微有点麻烦*/
+
+</style>
+</head>
+    <body>
+    	<!-- 1 -->
+    	<!-- <div class="btn"></div> -->
+
+    	<!-- 4、btn里面再加div -->
+    	<div class="btn">
+    		<div class="btnL">
+    			<!-- 6、右上角同样操作 -->
+    			<div class="btnR">百度</div>
+    		</div>
+    	</div>
+    </body>
+</html>
