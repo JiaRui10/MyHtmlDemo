@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	form {
+		margin: 0;
+	}
+	input {
+		margin: 0;
+		padding: 0;
+	}
+	select {
+		margin: 0;
+	}
+	textarea {
+		margin: 0;
+		padding: 0;
+		/*固定文本域*/
+		resize: none;
+		overflow: auto;
+
+		/*去掉焦点线。不过建议还是留下*/
+		outline: none;
+	}
+</style>
+</head>
+    <body>
+    	<!-- 1、表单标签form -->
+    	<form action="http://www.baidu.com/" method="get" target="_blank">
+    		
+    		<!-- 2、提交按钮。name相当于后端使用class的一个概念，建议写出来，然后空着 -->
+    		<input type="submit" value="提交ok" name="">
+    		<br><br>
+
+			<!-- 3、文本框 -->
+			<input type="text" name="">
+			<br><br>
+
+			<!-- 4、密码框 -->
+			<input type="password" name="">
+			<br><br>
+
+			<!-- 5、单选按钮，注意给其的name指定一样的gender -->
+			<!-- 嵌套一个label，可让其点击文字时也可以选中。再指定id -->
+			<input type="radio" name="gender" id="a"><label for="a">男</label>
+			<input type="radio" name="gender" id="b"><label for="b">女</label>
+			<br><br>
+
+			<!-- 6、复选框。checked为默认选中；disabled为禁用（这两个针对单选按钮也是有效的） -->
+			<input type="checkbox" name="" disabled>篮球
+			<input type="checkbox" name="" disabled>DNF
+			<input type="checkbox" name="">健身
+			<input type="checkbox" name="" checked>旅游
+			<input type="checkbox" name="">美食
+			<br><br>
+			<hr>
+
+			<!-- 以下的用的很少很少 -->
+			<!-- 7、上传 -->
+			<input type="file" name="">
+			<br><br>
+			<!-- 8、图片 -->
+			<input src="" type="image" name="">
+			<br><br>
+			<!-- 9、按钮 -->
+			<input type="button" name="">
+			<br><br>
+			<!-- 10、重置。注意会把整个页面的填充信息清空 -->
+			<input type="reset" name="">
+			<br><br>
+			<!-- 11、隐藏。后端用的较多。实际上通过审查元素可以看到隐藏的内容 -->
+			<input type="hidden" name="">
+			<br><br>
+			<hr>
+
+			<!-- 12、下拉选框。selcted可以默认选中 -->
+			<select name="" id="">
+				<option value="">1999</option>
+				<option value="">1998</option>
+				<option value="">1997</option>
+				<option value="">1996</option>
+				<option value="" selected>1995</option>
+			</select>
+			<br><br>
+			<!-- 13、文本域 -->
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+    	</form>
+    </body>
+</html>

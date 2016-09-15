@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<!-- 2、 -->
+<style>
+	input {
+		margin: 0;
+		padding: 0;
+	}
+	.text {
+		width: 300px;
+		height: 40px;
+		border: 1px solid blue;
+		/*2、注意在IE6下，如果输入的内容比本身的宽度长，图片背景会被往前推*/
+		background: url(images/sun.jpg) 0 center no-repeat #FFC;
+	}
+
+	/*4、box的样式设置跟之前的text一模一样*/
+	.box {
+		margin-top: 50px;
+
+		width: 300px;
+		height: 40px;
+		border: 1px solid blue;
+		background: url(images/sun.jpg) 0 center no-repeat #FFC;
+	}
+	/*5、对box中的input进行处理*/
+	.box input {
+		width: 300px;
+		height: 40px;
+		border: none;
+		background: none;
+	}
+</style>
+</head>
+    <body>
+    	<!-- 1、 -->
+    	<input type="text" name="" class="text">
+
+    	<!-- 3、解决方法：将input嵌套在div中 -->
+    	<div class="box">
+    		<input type="text" name="">
+    	</div>
+    </body>
+</html>

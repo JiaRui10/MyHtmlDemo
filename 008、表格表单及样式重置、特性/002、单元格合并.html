@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="小庄 http://github.com/JiaRui10" />
+<title>新建网页</title>
+<style>
+	th,td {
+		padding: 0;
+	}
+	table {
+		border-collapse: collapse;  
+	}
+	th,td {
+		border: 1px solid black;
+		height: 50px;
+		width: 100px;
+	}
+
+	table {
+		width: 500px;
+	}
+
+</style>
+</head>
+    <body>
+    	<!-- 1 -->
+    	<table>
+    		<tr>	<!-- 行 -->
+                <!-- 1、colspan 属性规定单元格可横跨的列数。注意要把被合并的东西去掉 -->
+    			<th colspan="2">表格标题</th>
+                <!-- 1 -->
+                <!-- <th>表格标题</th> -->
+    			<th>表格标题</th>
+    			<th>表格标题</th>
+    			<th>表格标题</th>
+    		</tr>
+    		<tr>
+                <!-- 2、rowspan属性规定单元格可横跨的行数。 -->
+    			<td rowspan="2">单元格</td>
+    			<td>单元格</td>
+    			<td>单元格</td>
+                <!-- 3、合并右下角四个单元格 -->
+    			<td colspan="2" rowspan="2">单元格</td>
+                <!-- 3 -->
+    			<!-- <td>单元格</td> -->
+    		</tr>
+    		<tr>
+                <!-- 2 -->
+    			<!-- <td>单元格</td> -->
+    			<td>单元格</td>
+    			<td>单元格</td>
+                <!-- 3 -->
+    			<!-- <td>单元格</td>
+    			<td>单元格</td> -->
+    		</tr>
+    	</table>
+    </body>
+</html>
